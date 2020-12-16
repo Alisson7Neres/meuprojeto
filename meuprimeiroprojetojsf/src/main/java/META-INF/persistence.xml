@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	
+
+	<persistence-unit name="meuprimeiroprojetojsf">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		
+		<class>br.com.entidade.Pessoa</class>
+		<class>br.com.entidade.Lancamento</class>
+		<class>br.com.entidade.Estados</class>
+		<class>br.com.entidade.Cidades</class>
+		
+	<properties>
+			<!-- 
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/meuprimeiroprojetojsf"/>
+			<property name="javax.persistence.jdbc.user" value="debian-sys-maint"/>
+			<property name="javax.persistence.jdbc.password" value="qkVCYrZzKyGCRoXp"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+			<property name="hibernate.show_sql" value="false"/>
+			<property name="hibernate.format_sql" value="false"/>
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			 -->
+		
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/meuprimeiroprojetojsf"/>
+			<property name="javax.persistence.jdbc.user" value="postgres"/>
+			<property name="javax.persistence.jdbc.password" value="admin"/>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+			
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
+		
+	</properties>
+
+
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	
+	<title>Login</title>
+</h:head>
+<h:body>
+	<h:panelGroup>
+	<h:form id="formLogin">
+	<div align="center">
+	<h1>Realize o login</h1>
+	
+	<h:panelGrid columns="2">
+		
+		<h:outputLabel value="Nome"/>
+		<h:inputText value="#{pessoaBean.pessoa.login}" id="nome"/>
+		
+		<h:outputLabel value="Senha"/>
+		<h:inputSecret value="#{pessoaBean.pessoa.senha}" id="senha"/>
+		
+		<p:commandButton value="acessar" action="#{pessoaBean.logar}"/>
+	</h:panelGrid>
+		<p:messages autoUpdate="true" value="verifica" action="#{erro}" />
+	</div>
+
+	</h:form>
+	</h:panelGroup>
+
+</h:body>
+</html>
